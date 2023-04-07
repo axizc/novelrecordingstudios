@@ -73,7 +73,7 @@
           <p>By: Ameya Tanikella</p>
           The songs will play as you scroll through the paragraphs. If you would like to turn this off, please click the sound on button.
           <h1></h1>
-          <button class="btn-get-started" onclick="Soundy()" >Sound on</button>
+          <button class="btn-get-started" id='onoff' onclick="Soundy()" >Sound on</button>
         </div>
       </div>
     </div>
@@ -132,14 +132,12 @@
   </main><!-- End #main -->
 
 <script>
-   function Soundy()
-    {
-      if(document.getElementsByClassName('btn-get-started').innerHTML != 'Sound off'){
-        document.getElementsByClassName('btn-get-started').innerHTML = 'Sound off';}
-      else{
-        document.getElementsByClassName('btn-get-started').innerHTML = 'Sound on';
-      }
-    }
+   currentvalue = document.getElementById('onoff').value;
+  if(currentvalue == "Sound off"){
+    document.getElementById("onoff").value="Sound on";
+  }else{
+    document.getElementById("onoff").value="Sound off";
+  }
 </script>
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
